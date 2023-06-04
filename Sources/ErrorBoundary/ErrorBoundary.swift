@@ -38,7 +38,7 @@ public extension EnvironmentValues {
 }
 
 public struct ErrorContext {
-    static let empty: ErrorContext = .init(storage: .constant(.init()))
+    public static let empty: ErrorContext = .init(storage: .constant(.init()))
     @Binding private var _storage: ErrorBoundaryStorage
 
     init(storage: Binding<ErrorBoundaryStorage>) {
