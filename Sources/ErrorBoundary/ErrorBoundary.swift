@@ -8,6 +8,7 @@
 import AnyError
 import SwiftUI
 
+@MainActor
 struct ErrorBoundaryStorage {
     private var _errors: [AnyError] = []
 
@@ -37,6 +38,7 @@ public extension EnvironmentValues {
     }
 }
 
+@MainActor
 public struct ErrorContext {
     public static let empty: ErrorContext = .init(storage: .constant(.init()))
     @Binding private var _storage: ErrorBoundaryStorage
@@ -72,6 +74,7 @@ public struct ErrorContext {
     }
 }
 
+@MainActor
 public struct ErrorBoundary<C>: View where C: View {
     @State private var _storage: ErrorBoundaryStorage = .init()
     private let _content: C
