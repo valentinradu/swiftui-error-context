@@ -24,7 +24,7 @@ let package = Package(
             dependencies: [
                 .product(name: "AnyError", package: "swift-any-error")
             ],
-            swiftSettings: [.unsafeFlags(["-Xfrontend", "-warn-concurrency"])]
+            swiftSettings: [.unsafeFlags(["-Xfrontend", "-warn-concurrency"], .when(configuration: .debug))]
         ),
         .testTarget(
             name: "ErrorBoundaryTests",
