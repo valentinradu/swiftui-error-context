@@ -1,7 +1,7 @@
 import XCTest
-@testable import ErrorBoundary
+@testable import ErrorContext
 
-final class ErrorBoundaryTests: XCTestCase {
+final class ErrorContextTests: XCTestCase {
     func testExample() throws {
         // XCTest Documenation
         // https://developer.apple.com/documentation/xctest
